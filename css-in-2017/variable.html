@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>css特性查询</title>
+    <style>
+    	:root {
+		    --theme-colour: cornflowerblue;
+		}
+		.l1 {
+		    color: var(--theme-colour);
+		}
+		.l2 {
+		    color: var(--theme-colour);
+		}
+		.l3 {
+		    color: var(--theme-colour);
+		}
+    </style>
+</head>
+<body>
+	<div class="container">
+		<li class="l1">first</li>
+		<li class="l2">second</li>
+		<li class="l3">third</li>
+		<li class="l4">fourth</li>
+	</div>
+	<script>
+		window.onload = function (argument) {
+			setTimeout(function() {
+				const rootEl = document.documentElement; 
+				rootEl.style.setProperty('--theme-colour', 'plum');  
+			}, 1000)
+		}
+	</script>
+</body>
+</html>

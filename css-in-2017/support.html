@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>css特性查询</title>
+    <style>
+    	@supports (display: flex) and (not (display: nothing)) {
+	    	.container {
+	    		display: flex;
+	    		width: 800px;
+	    		justify-content: space-between;
+	    	}
+    	}
+    	li {
+    		background-color: #1f267B;
+    		width: 100px;
+    		color: #fff;
+    	}
+    </style>
+</head>
+<body>
+	<div class="container">
+		<li>first</li>
+		<li>second</li>
+		<li>third</li>
+		<li>fourth</li>
+	</div>
+</body>
+</html>
